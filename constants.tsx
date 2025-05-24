@@ -65,7 +65,7 @@ export const GitHubIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 export const StackOverflowIcon: React.FC<{ className?: string }> = ({ className }) => (
  <svg aria-hidden="true" className={className || "w-6 h-6"} viewBox="0 0 32 37">
-    <path d="M26 33v-9h4v13H0V24h4v9h22Z" fill="currentColor" opacity="0.5"/> {/* Adjusted to use currentColor and slight opacity for the grey part */}
+    <path d="M26 33v-9h4v13H0V24h4v9h22Z" fill="currentColor" opacity="0.5"/>
     <path d="m21.5 0-2.7 2 9.9 13.3 2.7-2L21.5 0ZM26 18.4 13.3 7.8l2.1-2.5 12.7 10.6-2.1 2.5Z" fill="currentColor"/>
     <path d="m9.1 15.2 15 7 1.4-3-15-7-1.4 3Zm14 10.79.68-2.95-16.1-3.35L7 23l16.1 2.99ZM23 30H7v-3h16v3Z" fill="currentColor"/>
   </svg>
@@ -175,11 +175,11 @@ export const PROFILE_DATA: ProfileData = {
   projects: [
     {
       title: "Zoho Campaigns for iOS & iPadOS: Mobile Email Marketing",
-      description: "Led and contributed to the Zoho Campaigns app for iPhone and iPad, delivering a comprehensive email marketing suite on mobile. Engineered an intuitive UI/UX for campaign creation, real-time analytics, and contact management. Implemented iOS/iPadOS-specific features including interactive Widgets, Rich Notifications, Siri Shortcuts for quick actions, Live Text for content creation, Spotlight Search, iPad multitasking (Slide Over, Split View, Stage Manager), Drag & Drop, and robust accessibility features (VoiceOver, Audio Graphs, Dynamic Type).",
-      technologies: ["iOS", "iPadOS", "Swift", "UIKit", "SwiftUI", "Core Data", "SiriKit", "Widgets", "Accessibility", "Push Notifications", "API Integration", "XCTest"],
-      imageUrl: "https://picsum.photos/seed/zohomobilecampaigns/400/280",
-      liveUrl: "https://www.zoho.com/campaigns/mobile/ios.html",
-      // repoUrl: "#" // No public repo for this project
+      description: "Led and contributed to the Zoho Campaigns app for iPhone and iPad, delivering a comprehensive email marketing suite on mobile. Engineered an intuitive UI/UX for campaign creation, real-time analytics, and contact management. Implemented iOS/iPadOS-specific features including interactive Widgets, Rich Notifications, Siri Shortcuts for quick actions, Live Text for content creation, Spotlight Search, iPad multitasking (Slide Over, Split View, Stage Manager), Drag-and-drop for report building and list management, Apple Pencil support (Scribble & Drawing Canvas), and extensive accessibility features (VoiceOver, Audio Graphs, Dynamic Text Size).",
+      technologies: ["iOS", "iPadOS", "Swift", "UIKit", "CoreData", "SiriKit", "Widgets", "Accessibility", "API Integration"],
+      imageUrl: "https://img.youtube.com/vi/FYD85YgtPho/maxresdefault.jpg",
+      liveUrl: "https://www.youtube.com/watch?v=FYD85YgtPho",
+      repoUrl: "#" 
     }
-  ]
+  ],
 };
