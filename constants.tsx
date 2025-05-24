@@ -98,7 +98,7 @@ export const PROFILE_DATA: ProfileData = {
   title: "Engineering Lead - Mobile, Native iOS and Android",
   headline: "Engineering Lead - Mobile (Native iOS & Android) | Architecture | High-Level & Low-Level Design",
   location: "Chennai, Tamil Nadu, India",
-  profileImageUrl: "https://i.sstatic.net/Q8g6Y.jpg?s=256", 
+  profileImageUrl: "https://avatars.githubusercontent.com/u/42436320?s=256&u=5758fb3d0f70eaf9677b8a9729ab560901cc4b25&v=4", 
   about: `Dedicated Engineering Lead with a passion for building high-quality mobile applications. Currently leading mobile development efforts at Zoho, specializing in native iOS and Android platforms. Expertise in software architecture, high-level, and low-level design.`,
   contactLinks: [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/rakeshashastri', icon: <LinkedInIcon />, ariaLabel: "Rakesha Shastri's LinkedIn Profile" },
