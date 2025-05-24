@@ -6,7 +6,14 @@ import { Project } from '../types';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
   <div className="bg-slate-800 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 flex flex-col">
-    <img src={project.imageUrl} alt={project.title} className="w-full h-56 object-cover"/>
+    {/* Image container - height adjusts to image aspect ratio */}
+    <div className="overflow-hidden">
+      <img 
+        src={project.imageUrl} 
+        alt={project.title} 
+        className="w-full h-auto" // Image fills width, height is auto to maintain aspect ratio
+      />
+    </div>
     <div className="p-6 flex flex-col flex-grow">
       <h3 className="text-xl font-semibold text-slate-100 mb-2">{project.title}</h3>
       <p className="text-slate-300 text-sm leading-relaxed mb-4 flex-grow">{project.description}</p>
@@ -20,9 +27,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
       </div>
       <div className="mt-auto flex space-x-3">
         {project.liveUrl && project.liveUrl !== "#" && (
-          <a 
-            href={project.liveUrl} 
-            target="_blank" 
+          <a
+            href={project.liveUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
           >
@@ -31,9 +38,9 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
           </a>
         )}
         {project.repoUrl && project.repoUrl !== "#" && (
-           <a 
-            href={project.repoUrl} 
-            target="_blank" 
+           <a
+            href={project.repoUrl}
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-slate-400 hover:text-slate-300 transition-colors"
           >
@@ -47,13 +54,26 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
 );
 
 const ProjectsSection: React.FC = () => {
+  // Determine layout based on number of projects
+  const useFlexCenterLayout = PROFILE_DATA.projects.length === 1;
+
   return (
     <Section id="projects" title="Featured Projects">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {PROFILE_DATA.projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
-        ))}
-      </div>
+      {useFlexCenterLayout ? (
+        <div className="flex justify-center">
+          <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3"> {/* Max width for single card */}
+            {PROFILE_DATA.projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PROFILE_DATA.projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
+        </div>
+      )}
     </Section>
   );
 };

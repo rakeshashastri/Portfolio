@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Section from './Section';
-import { PROFILE_DATA, CommandLineIcon } from '../constants'; // Assuming CommandLineIcon
+import { PROFILE_DATA, CommandLineIcon } from '../constants';
 import { SkillCategory } from '../types';
 
 
@@ -28,7 +27,7 @@ const SkillsCategoryCard: React.FC<{ category: SkillCategory }> = ({ category })
 const SkillsSection: React.FC = () => {
   return (
     <Section id="skills" title="Technical Skills">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {PROFILE_DATA.skills.map((category, index) => (
           <SkillsCategoryCard key={index} category={category} />
         ))}

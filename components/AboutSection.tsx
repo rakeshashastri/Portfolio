@@ -1,13 +1,13 @@
 import React from 'react';
 import Section from './Section';
-import { PROFILE_DATA, StackOverflowIcon } from '../constants'; // Added StackOverflowIcon
+import { PROFILE_DATA, StackOverflowIcon } from '../constants';
 
 const AboutSection: React.FC = () => {
   const stackOverflowProfileUrl = PROFILE_DATA.contactLinks.find(link => link.name === 'Stack Overflow')?.url;
 
   return (
     <Section id="about" title="About Me">
-      <div className="grid md:grid-cols-3 gap-8 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
         <div className="md:col-span-1 flex justify-center">
           <img 
             src={PROFILE_DATA.profileImageUrl || `https://picsum.photos/seed/${PROFILE_DATA.name.replace(/\s+/g, '')}/300/300`} 
@@ -16,7 +16,7 @@ const AboutSection: React.FC = () => {
           />
         </div>
         <div className="md:col-span-2 text-slate-300 text-lg leading-relaxed">
-          <p className="mb-6">
+          <p className="mb-6 text-center sm:text-left">
             {PROFILE_DATA.about}
           </p>
           
@@ -25,7 +25,7 @@ const AboutSection: React.FC = () => {
               <StackOverflowIcon className="w-6 h-6 mr-2 text-orange-500" />
               Stack Overflow Snapshot
             </h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-sm mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm mb-4">
               <div>
                 <span className="font-semibold text-slate-200">Reputation:</span>
                 <span className="ml-2 text-cyan-400">{PROFILE_DATA.stackOverflowStats.reputation}</span>
