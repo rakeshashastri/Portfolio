@@ -86,11 +86,9 @@ export const ExternalLinkIcon: React.FC<{ className?: string }> = ({ className }
 
 export const NAV_ITEMS: NavItem[] = [
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Education', href: '#education' },
-  { name: 'Contact', href: '#contact' },
 ];
 
 export const PROFILE_DATA: ProfileData = {

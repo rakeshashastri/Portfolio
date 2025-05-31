@@ -9,7 +9,7 @@ const ContactCard: React.FC<{ link: ContactLink }> = ({ link }) => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label={link.ariaLabel}
-    className="flex flex-col items-center justify-center p-6 bg-slate-800 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-slate-700 hover:shadow-cyan-500/30 group"
+    className="flex flex-col items-center justify-center p-6 bg-[#1a1a1a] rounded-xl shadow-lg transform transition-all duration-300 hover:scale-110 hover:bg-[#242424] hover:shadow-cyan-500/30 group"
   >
     <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 mb-3">
       {React.cloneElement(link.icon, { className: "w-10 h-10" })}

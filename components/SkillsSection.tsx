@@ -5,13 +5,13 @@ import { SkillCategory } from '../types';
 
 
 const SkillItem: React.FC<{ name: string }> = ({ name }) => (
-  <li className="bg-slate-800 text-slate-300 py-2 px-4 rounded-md shadow-sm hover:bg-slate-700 hover:text-cyan-400 transition-all duration-200 ease-in-out transform hover:scale-105 cursor-default">
+  <li className="bg-[#1a1a1a] text-slate-300 py-2 px-4 rounded-md shadow-sm hover:bg-[#242424] hover:text-cyan-400 transition-all duration-200 ease-in-out transform hover:scale-105 cursor-default">
     {name}
   </li>
 );
 
 const SkillsCategoryCard: React.FC<{ category: SkillCategory }> = ({ category }) => (
-  <div className="bg-slate-800 p-6 rounded-xl shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/30">
+  <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/30">
     <div className="flex items-center mb-4">
       <CommandLineIcon className="w-7 h-7 text-cyan-400 mr-3" />
       <h3 className="text-xl font-semibold text-slate-100">{category.category}</h3>

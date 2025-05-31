@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
             {PROFILE_DATA.about}
           </p>
           
-          <div className="mt-6 bg-slate-800 p-6 rounded-xl shadow-lg">
+          <div className="mt-6 bg-[#1a1a1a] p-6 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-100 mb-4 flex items-center">
               <StackOverflowIcon className="w-6 h-6 mr-2 text-orange-500" />
               Stack Overflow Snapshot

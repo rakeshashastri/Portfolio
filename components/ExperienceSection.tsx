@@ -41,10 +41,12 @@ const ExperienceCard: React.FC<{ item: Experience }> = ({ item }) => (
 const ExperienceSection: React.FC = () => {
   return (
     <Section id="experience" title="Professional Experience">
-      <div className="relative max-w-3xl mx-auto"> {/* Container for timeline items */}
-        {PROFILE_DATA.experiences.map((exp, index) => (
-          <ExperienceCard key={index} item={exp} />
-        ))}
+      <div className="max-w-7xl mx-auto"> {/* Wider container to match other sections */}
+        <div className="relative max-w-3xl mx-auto"> {/* Container for timeline items */}
+          {PROFILE_DATA.experiences.map((exp, index) => (
+            <ExperienceCard key={index} item={exp} />
+          ))}
+        </div>
       </div>
     </Section>
   );

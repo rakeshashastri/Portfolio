@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-800 text-slate-400 py-8 text-center">
+    <footer className="bg-[#1a1a1a] text-slate-400 py-8 text-center w-full mt-auto">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center space-x-6 mb-4">
           {PROFILE_DATA.contactLinks.map((link) => (

@@ -5,7 +5,7 @@ import { PROFILE_DATA, ExternalLinkIcon, GitHubIcon } from '../constants';
 import { Project } from '../types';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
-  <div className="bg-slate-800 rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 flex flex-col">
+  <div className="bg-[#1a1a1a] rounded-lg shadow-xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-cyan-500/30 flex flex-col">
     {/* Image container - height adjusts to image aspect ratio */}
     <div className="overflow-hidden">
       <img 
@@ -21,7 +21,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => (
         <p className="text-sm font-semibold text-slate-200 mb-1">Technologies:</p>
         <div className="flex flex-wrap gap-2">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="bg-slate-700 text-xs text-cyan-300 px-2 py-1 rounded-full">{tech}</span>
+            <span key={index} className="bg-[#242424] text-xs text-cyan-300 px-2 py-1 rounded-full">{tech}</span>
           ))}
         </div>
       </div>
@@ -59,21 +59,23 @@ const ProjectsSection: React.FC = () => {
 
   return (
     <Section id="projects" title="Featured Projects">
-      {useFlexCenterLayout ? (
-        <div className="flex justify-center">
-          <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3"> {/* Max width for single card */}
+      <div className="max-w-7xl mx-auto">
+        {useFlexCenterLayout ? (
+          <div className="flex justify-center">
+            <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3"> {/* Max width for single card */}
+              {PROFILE_DATA.projects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PROFILE_DATA.projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
           </div>
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROFILE_DATA.projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
-      )}
+        )}
+      </div>
     </Section>
   );
 };
